@@ -1,0 +1,178 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 80%;
+  font-family: Raleway;
+  background: url(../images/background-3.jpg) repeat top left;
+}
+
+.form {
+  margin: 0 auto;
+  position: fixed;
+  top: 20%;
+  left: 37%;
+  background-color: rgba(48, 48, 48, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  padding-top: 0px;
+  width: 300px;
+}
+
+.form:hover {
+  background-color: rgba(38, 38, 38, 0.85);
+  border: 2px solid rgba(0, 0, 0, 0.9);
+}
+
+.topbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: .9rem;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 7px 14px;
+}
+
+.input:hover {
+  border: 1px solid white;
+}
+
+.submit {
+  padding: 7px 14px;
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  font-size: .9rem;
+  font-family: Raleway;
+  font-weight: 400;
+  display: block;
+  color: white;
+  position: relative;
+}
+
+.submit:focus {
+  outline: none;
+}
+
+.submit:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.error {
+  font-size: .8rem;
+  padding: 5px 10px;
+  font-family: Raleway;
+  color: red;
+  font-weight: 600;
+  height: 15px
+}
+
+a.register {
+  text-decoration: none;
+  text-align: right;
+  padding-top: 5px;
+  padding-left: 150px;
+}
+
+a.register:link {
+  color: rgba(237, 237, 237, 0.9);
+}
+a.register:visited {
+  color: rgba(237, 237, 237, 0.9);
+}
+a.register:hover {
+  color: rgba(237, 237, 237, 0.9);
+  font-weight: bolder;
+}
+a.register:active {
+  color: rgba(237, 237, 237, 0.9);
+  outline: none;
+}
+a.register:focus {
+  color: rgba(237, 237, 237, 0.9);
+  outline: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: .8pem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #2196F3;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
